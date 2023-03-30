@@ -1,8 +1,8 @@
 package com.ys.fruit.servlets;
 
 import com.ys.fruit.dao.FruitDAO;
-import com.ys.fruit.dao.impl.FruitDAOImpl;
 import com.ys.fruit.pojo.Fruit;
+import com.ys.fruit.dao.impl.FruitDAOImpl;
 import com.ys.myssm.myspringmvc.ViewBaseServlet;
 
 import javax.servlet.ServletException;

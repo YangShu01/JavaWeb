@@ -59,7 +59,7 @@ public class Fruit {
         this.remark = remark;
     }
 
-
+    @Override
     public String toString() {
         return "Fruit{" +
                 "fid=" + fid +

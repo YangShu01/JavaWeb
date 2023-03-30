@@ -20,7 +20,33 @@ public class FruitServlet extends ViewBaseServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
+        String operate = req.getParameter("operate");
+        if(StringUtil.isEmpty(operate))
+        {
+            operate = "index";
+        }
 
+        switch (operate)
+        {
+            case "index":
+                index(req,resp);
+                break;
+            case "add":
+                add(req,resp);
+                break;
+            case "del":
+                del(req,resp);
+                break;
+            case "edit":
+                edit(req, resp);
+                break;
+            case "update":
+                update(req, resp);
+                break;
+            default:
+                throw new RuntimeException("operate值非法");
+        }
     }
 
     private void update(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException
